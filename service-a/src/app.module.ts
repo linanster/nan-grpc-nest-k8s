@@ -16,7 +16,10 @@ import { MathController } from './math.controller';
           channelOptions: {
             'grpc.service_config': JSON.stringify({
               loadBalancingConfig: [{ round_robin: {} }]
-            })
+            }),
+            'grpc.dns_min_time_between_resolutions_ms': 5000,
+            'grpc.enable_retries': 1,
+            'grpc.service_config_disable_resolution': 0
           }
         },
       },
