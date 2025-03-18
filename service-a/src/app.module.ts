@@ -19,7 +19,9 @@ import { MathController } from './math.controller';
             }),
             'grpc.dns_min_time_between_resolutions_ms': 5000,
             'grpc.enable_retries': 1,
-            'grpc.service_config_disable_resolution': 0
+            'grpc.service_config_disable_resolution': 0,
+            'grpc.lb_policy_name': 'round_robin',
+            'grpc.max_reconnect_backoff_ms': 1000
           }
         },
       },
