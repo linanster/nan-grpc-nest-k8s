@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY package*.json ./
 COPY tsconfig.json ./
-COPY proto ./proto
+COPY proto /proto
 COPY service-a ./service-a
 
 RUN npm install
