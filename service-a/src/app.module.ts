@@ -12,7 +12,12 @@ import { MathController } from './math.controller';
         options: {
           package: 'system',
           protoPath: join(__dirname, '../../proto/math.proto'),
-          url: 'demo4-grpc-server-svc.on-poc.svc.cluster.local:50051'
+          url: 'demo4-grpc-server-svc.on-poc.svc.cluster.local:50051',
+          channelOptions: {
+            'grpc.service_config': JSON.stringify({
+              loadBalancingConfig: [{ round_robin: {} }]
+            })
+          }
         },
       },
     ]),
