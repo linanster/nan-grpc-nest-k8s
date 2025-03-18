@@ -21,7 +21,11 @@ import { MathController } from './math.controller';
             'grpc.enable_retries': 1,
             'grpc.service_config_disable_resolution': 0,
             'grpc.lb_policy_name': 'round_robin',
-            'grpc.max_reconnect_backoff_ms': 1000
+            'grpc.max_reconnect_backoff_ms': 1000,
+            'grpc.keepalive_time_ms': 10000,
+            'grpc.keepalive_timeout_ms': 5000,
+            'grpc.keepalive_permit_without_calls': 1,
+            'grpc.client_idle_timeout_ms': 60000
           }
         },
       },
