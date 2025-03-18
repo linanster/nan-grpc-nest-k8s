@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package system;
+
+service SystemService {
+  rpc GetHostname (Empty) returns (HostnameResponse);
+}
+
+message Empty {}
+
+message HostnameResponse {
+  string hostname = 1;
+}
